@@ -1,3 +1,5 @@
+#database.py
+
 import sqlite3
 from config import DB_PATH
 
@@ -140,3 +142,9 @@ def create_tables(connection):
     """)
 
     connection.commit()
+
+if __name__ == "__main__":
+    conn = get_connection()
+    create_tables(conn)
+    print("Tables created successfully")
+    conn.close()

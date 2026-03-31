@@ -1,3 +1,7 @@
+#config.py
+
+import os
+
 #---- SEASON SETTINGS ----#
 START_SEASON = 2014
 END_SEASON = 2026
@@ -13,7 +17,8 @@ STATS_REFRESH_INTERVAL = 4 * 60 * 60    # 4 HOURS
 LIVE_TRACKER_POLL = 30
 
 #---- DATABASE SETTINGS ----#
-DB_PATH = "data/sportspicks.db"
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DB_PATH = os.path.join(PROJECT_ROOT, "data", "sportspicks.db")
 
 #---- SPORTSBOOKS ----#
 SUPPORTED_BOOKS = [
